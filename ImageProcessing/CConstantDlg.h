@@ -22,5 +22,6 @@ protected:
 
 	DECLARE_MESSAGE_MAP()
 public:
-	int m_Constant;
+//	int m_Constant;
+	double m_Constant;
 };

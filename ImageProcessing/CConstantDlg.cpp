@@ -25,8 +25,10 @@ CConstantDlg::~CConstantDlg()
 void CConstantDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	//  DDX_Text(pDX, IDC_EDIT1, m_Constant);
+	//  DDV_MinMaxInt(pDX, m_Constant, 0, 255);
 	DDX_Text(pDX, IDC_EDIT1, m_Constant);
-	DDV_MinMaxInt(pDX, m_Constant, 0, 255);
+	DDV_MinMaxDouble(pDX, m_Constant, 0, 255);
 }
 
 
