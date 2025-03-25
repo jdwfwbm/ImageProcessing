@@ -212,7 +212,10 @@ BOOL CImageProcessingDoc::OnSaveDocument(LPCTSTR lpszPathName)
 		File.Open(SaveDlg.GetPathName(), CFile::modeCreate |
 			CFile::modeWrite);
 		// 파일 열기
-		File.Write(m_OutputImage, m_size); // 파일 쓰기
+		BYTE* pSaveData = (m_OutputImage != NULL && m_Re_size > 0) ? m_OutputImage : m_InputImage;
+		int dataSize = (m_OutputImage != NULL && m_Re_size > 0) ? m_Re_size : m_size;
+
+		File.Write(pSaveData, dataSize); // 파일 쓰기
 		File.Close(); // 파일 닫기
 	}
 
