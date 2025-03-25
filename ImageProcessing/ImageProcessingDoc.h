@@ -56,6 +56,7 @@ public:
 	int m_Re_size;
 	virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
 	virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
+
 	afx_msg void OnDownSampling();
 	afx_msg void OnUpSampling();
 	afx_msg void OnQuantization();
